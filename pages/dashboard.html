@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/layout.css">
+    <title>Modern Client Dashboard</title>
+</head>
+<body>
+    <div class="dashboard-container">
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <img src="../images/logo.png" alt="Logo" class="logo"> <!-- Add your logo here -->
+                <h1>CNC Web Portal</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li class="mb-4"><a href="/pages/dashboard.html" class="block py-2 px-4">Dashboard</a></li>
+                    <li class="mb-4"><a href="/pages/partnerdetails.html" class="block py-2 px-4">Partner Details</a></li>
+                    <li class="mb-4"><a href="/pages/profile.html" class="block py-2 px-4">Profile</a></li>
+                    <li class="mb-4"><a href="/pages/calendar.html" class="block py-2 px-4">Calendar</a></li>
+                    <li class="mb-4"><a href="/pages/messages.html" class="block py-2 px-4">Messages</a></li>
+                    <li class="mb-4"><a href="/pages/settings.html" class="block py-2 px-4">Settings</a></li>
+                </ul>
+            </nav>
+            <a href="/pages/login.html" class="logout"><i class="fas fa-sign-out-alt"></i> Logout</a>
+        </aside>
+        
+        <main class="main-content">
+            <header class="top-bar">
+                <div class="search-container">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="Search...">
+                </div>
+                <div class="user-info">
+                    <div class="user-details">
+                        <span class="user-name">Alan Yip</span>
+                        <span class="user-role">Admin</span>
+                    </div>
+                    <i class="fas fa-user-circle avatar" style="font-size: 40px; color: #33b2e1;" id="avatar"></i>
+                    <div class="popup-menu" id="popupMenu">
+                        <ul>
+                            <li><a href="/pages/profile.html">Profile</a></li>
+                            <li><a href="/pages/settings.html">Settings</a></li>
+                            <li><a href="/pages/login.html">Logout</a></li>
+                        </ul>
+                    </div>
+                </div>                
+            </header>
+
+            <div class="chart-container">
+                <h2>Client Dashboard</h2>
+            </div>
+
+            
+            <div class="dashboard-grid">
+                <div class="dashboard-card">
+                    <i class="fas fa-eye card-icon"></i>
+                    <div class="card-content">
+                        <h3>$3,456K</h3>
+                        <p>Total views</p>
+                        <span class="trend positive">0.43% <i class="fas fa-arrow-up"></i></span>
+                    </div>
+                </div>
+                <div class="dashboard-card">
+                    <i class="fas fa-dollar-sign card-icon"></i>
+                    <div class="card-content">
+                        <h3>$45.2K</h3>
+                        <p>Total Profit</p>
+                        <span class="trend positive">4.35% <i class="fas fa-arrow-up"></i></span>
+                    </div>
+                </div>
+                <div class="dashboard-card">
+                    <i class="fas fa-box card-icon"></i>
+                    <div class="card-content">
+                        <h3>2,450</h3>
+                        <p>Total Product</p>
+                        <span class="trend positive">2.59% <i class="fas fa-arrow-up"></i></span>
+                    </div>
+                </div>
+                <div class="dashboard-card">
+                    <i class="fas fa-users card-icon"></i>
+                    <div class="card-content">
+                        <h3>3,456</h3>
+                        <p>Total Users</p>
+                        <span class="trend negative">0.95% <i class="fas fa-arrow-down"></i></span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="chart-container">
+                <h2>Total Revenue & Sales</h2>
+                <div class="chart-placeholder">
+                    <p>Chart goes here</p>
+                </div>
+            </div>
+            
+            <div class="chart-grid">
+                <div class="chart-card">
+                    <h2>Profit this week</h2>
+                    <div class="chart-placeholder">
+                        <p>Chart goes here</p>
+                    </div>
+                </div>
+                <div class="chart-card">
+                    <h2>Visitors Analytics</h2>
+                    <div class="chart-placeholder">
+                        <p>Chart goes here</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="../js/main.js"></script>
+</body>
+</html>
