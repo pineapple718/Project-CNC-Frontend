@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CNC World Tour Partner Portal</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f8ff; /* Light blue background */
+        }
+
+        header {
+            background-color: #007acc; /* Light blue color */
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .logo img {
+            height: 100px;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+            nav ul li {
+                margin-right: 20px;
+            }
+
+                nav ul li a {
+                    color: white;
+                    text-decoration: none;
+                    font-weight: bold;
+                }
+
+        .user-profile {
+            display: flex;
+            align-items: center;
+        }
+
+            .user-profile img {
+                height: 40px;
+                margin-right: 10px;
+            }
+
+        main {
+            padding: 20px;
+        }
+
+        .overview {
+            background-color: white;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+        }
+
+        .stats {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .stat-box {
+            background-color: #e6f0ff; /* Slightly lighter blue */
+            padding: 20px;
+            width: 22%;
+            text-align: center;
+            border-radius: 8px;
+        }
+
+            .stat-box h2 {
+                margin: 0 0 10px;
+            }
+
+        .recent-activity {
+            margin-top: 20px;
+        }
+
+            .recent-activity ul {
+                list-style-type: none;
+                padding: 0;
+            }
+
+        .partner-directory {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+            .partner-directory input {
+                width: 100%;
+                padding: 10px;
+                margin-bottom: 20px;
+                border-radius: 4px;
+                border: 1px solid #ccc;
+            }
+
+        .partner-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .partner-card {
+            background-color: #e6f0ff;
+            padding: 20px;
+            border-radius: 8px;
+            width: calc(33.333% - 20px);
+            box-sizing: border-box;
+        }
+
+        footer {
+            background-color: #007acc;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 20px;
+            border-radius: 8px;
+        }
+
+            footer a {
+                color: white;
+                text-decoration: none;
+                margin-left: 10px;
+            }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="logo.png" alt="CNC World Tour">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Partners Directory</a></li>
+                <li><a href="#">Bookings & History</a></li>
+                <li><a href="#">Events</a></li>
+                <li><a href="#">Messages</a></li>
+                <li><a href="#">Notifications</a></li>
+            </ul>
+        </nav>
+        <div class="user-profile">
+            <img src="user-icon.png" alt="User Profile">
+            <span>Alan</span>
+        </div>
+    </header>
+    <main>
+        <section class="overview">
+            <h1>Dashboard Overview</h1>
+            <div class="stats">
+                <div class="stat-box">
+                    <h2>Total Partners</h2>
+                    <p>20</p>
+                </div>
+                <div class="stat-box">
+                    <h2>Recent Bookings</h2>
+                    <p>5</p>
+                </div>
+                <div class="stat-box">
+                    <h2>Upcoming Events</h2>
+                    <p>3</p>
+                </div>
+                <div class="stat-box">
+                    <h2>Customer Reviews</h2>
+                    <p>48</p>
+                </div>
+            </div>
+            <div class="recent-activity">
+                <h2>Recent Activity</h2>
+                <ul>
+                    <li>New booking by Restaurant A</li>
+                    <li>Message received from Partner X</li>
+                    <li>Event collaboration with Restaurant B</li>
+                </ul>
+            </div>
+        </section>
+        <section class="partner-directory">
+            <h2>Partners Directory</h2>
+            <input type="text" placeholder="Search partners...">
+            <div class="partner-list">
+                <div class="partner-card">
+                    <h3>Restaurant A</h3>
+                    <p>Location: Sydney</p>
+                    <p>Cuisine: Seafood</p>
+                </div>
+                <div class="partner-card">
+                    <h3>Restaurant B</h3>
+                    <p>Location: Melbourne</p>
+                    <p>Cuisine: Italian</p>
+                </div>
+                <!-- Add more partner cards as needed -->
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 CNC World Tour. All rights reserved.</p>
+        <a href="#">Terms of Service</a> | <a href="#">Privacy Policy</a>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Example: Alert when a user clicks on a partner card
+            const partnerCards = document.querySelectorAll('.partner-card');
+            partnerCards.forEach(card => {
+                card.addEventListener('click', function () {
+                    alert('Partner details: ' + this.querySelector('h3').innerText);
+                });
+            });
+        });
+    </script>
+</body>
+</html>
