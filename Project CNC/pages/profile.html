@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/main.css">
+    <title>Client Profile</title>
+</head>
+<body>
+    <div class="dashboard-container">
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <img src="../image/logo.png" alt="Logo" class="logo"> <!-- Add your logo here -->
+                <h1>CNC Web Portal</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li class="mb-4"><a href="/pages/dashboard.html" class="block py-2 px-4">Dashboard</a></li>
+                    <li class="mb-4"><a href="/pages/partnerdetails.html" class="block py-2 px-4">Partner Details</a></li>
+                    <li class="mb-4"><a href="/pages/profile.html" class="block py-2 px-4 active">Profile</a></li>
+                    <li class="mb-4"><a href="/pages/calendar.html" class="block py-2 px-4">Calendar</a></li>
+                    <li class="mb-4"><a href="/pages/messages.html" class="block py-2 px-4">Messages</a></li>
+                    <li class="mb-4"><a href="/pages/settings.html" class="block py-2 px-4">Settings</a></li>
+                </ul>
+            </nav>
+            <a href="/log in.html" class="logout"><i class="fas fa-sign-out-alt"></i> Logout</a>
+        </aside>
+        
+        <main class="main-content">
+            <header class="top-bar">
+                <div class="search-container">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="Search...">
+                </div>
+                <div class="user-info">
+                    <div class="user-details">
+                        <span class="user-name">Alan Yip</span>
+                        <span class="user-role">Admin</span>
+                    </div>
+                    <i class="fas fa-user-circle avatar" style="font-size: 40px; color: #33b2e1;" id="avatar"></i>
+                    <div class="popup-menu" id="popupMenu">
+                        <ul>
+                            <li><a href="/pages/profile.html">Profile</a></li>
+                            <li><a href="/pages/settings.html">Settings</a></li>
+                            <li><a href="/pages/login.html">Logout</a></li>
+                        </ul>
+                    </div>
+                </div>                                
+            </header>
+
+            <div class="chart-container">
+                <h2>Profile Details</h2>
+            </div>
+
+        
+            <div class="profile-container bg-white p-6 rounded-lg shadow">
+                <div class="profile-header flex items-center mb-6">
+                    <img src="../images/clientavatar.jpg" alt="Client Avatar" class="client-avatar">
+                    <div class="client-info ml-4">
+                        <h3 class="text-2xl font-semibold">John Doe</h3>
+                        <p class="text-gray-600">john.doe@example.com</p>
+                        <p class="text-gray-600">+123 456 7890</p>
+                    </div>
+                </div>
+
+                <div class="info-grid">
+                    <div class="info-card">
+                        <h4 class="info-title">Company</h4>
+                        <p>Doe Industries</p>
+                    </div>
+                    <div class="info-card">
+                        <h4 class="info-title">Location</h4>
+                        <p>New York, USA</p>
+                    </div>
+                    <div class="info-card">
+                        <h4 class="info-title">Status</h4>
+                        <span class="status active">Active</span>
+                    </div>
+                    <div class="info-card">
+                        <h4 class="info-title">Joined Date</h4>
+                        <p>January 15, 2020</p>
+                    </div>
+                </div>
+
+                <div class="notes-section mt-6">
+                    <h4 class="notes-title">Notes</h4>
+                    <textarea class="notes-input" rows="5" placeholder="Add your notes here..."></textarea>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="../js/main.js"></script>
+</body>
+</html>

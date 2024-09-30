@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <link rel="stylesheet" href="../css/main.css">
+        <title>Settings</title>
+    </head>
+    <body>
+        <div class="dashboard-container">
+            <aside class="sidebar">
+                <div class="sidebar-header">
+                    <img src="../image/logo.png" alt="Logo" class="logo"> <!-- Add your logo here -->
+                    <h1>CNC Web Portal</h1>
+                </div>
+
+                <nav>
+                    <ul>
+                        <li class="mb-4"><a href="/pages/dashboard.html" class="block py-2 px-4">Dashboard</a></li>
+                        <li class="mb-4"><a href="/pages/partnerdetails.html" class="block py-2 px-4">Partner Details</a></li>
+                        <li class="mb-4"><a href="/pages/profile.html" class="block py-2 px-4">Profile</a></li>
+                        <li class="mb-4"><a href="/pages/calendar.html" class="block py-2 px-4">Calendar</a></li>
+                        <li class="mb-4"><a href="/pages/messages.html" class="block py-2 px-4">Messages</a></li>
+                        <li class="mb-4"><a href="/pages/settings.html" class="block py-2 px-4 active">Settings</a></li>
+                    </ul>
+                </nav>
+
+                <a href="/log in.html" class="logout"><i class="fas fa-sign-out-alt"></i> Logout</a>
+
+            </aside>
+            
+            <main class="main-content">
+
+                <header class="top-bar">
+                    <div class="search-container">
+                        <i class="fas fa-search"></i>
+                        <input type="text" placeholder="Search...">
+                    </div>
+                    <div class="user-info">
+                        <div class="user-details">
+                            <span class="user-name">Alan Yip</span>
+                            <span class="user-role">Admin</span>
+                        </div>
+                        <i class="fas fa-user-circle avatar" style="font-size: 40px; color: #33b2e1;" id="avatar"></i>
+                        <div class="popup-menu" id="popupMenu">
+                            <ul>
+                                <li><a href="/pages/profile.html">Profile</a></li>
+                                <li><a href="/pages/settings.html">Settings</a></li>
+                                <li><a href="/pages/login.html">Logout</a></li>
+                            </ul>
+                        </div>
+                    </div>                                               
+                </header>
+
+                <div class="chart-container">
+                    <h2>Settings</h2>
+                </div>
+            
+                <div class="settings-container bg-white p-6 rounded-lg shadow">
+                    
+                    <div class="setting-section">
+                        <h3 class="setting-title">Profile Settings</h3>
+                        <div class="setting-item">
+                            <label for="username">Username:</label>
+                            <input type="text" id="username" placeholder="Enter your username">
+                        </div>
+                        <div class="setting-item">
+                            <label for="email">Email:</label>
+                            <input type="email" id="email" placeholder="Enter your email">
+                        </div>
+                        <div class="setting-item">
+                            <label for="password">Password:</label>
+                            <input type="password" id="password" placeholder="Change your password">
+                        </div>
+                    </div>
+                    
+                    <div class="setting-section">
+                        <h3 class="setting-title">Notification Settings</h3>
+                        <div class="setting-item">
+                            <label for="email-notifications">Email Notifications:</label>
+                            <input type="checkbox" id="email-notifications" checked>
+                        </div>
+                        <div class="setting-item">
+                            <label for="sms-notifications">SMS Notifications:</label>
+                            <input type="checkbox" id="sms-notifications">
+                        </div>
+                    </div>
+
+                    <div class="setting-section">
+                        <h3 class="setting-title">Privacy Settings</h3>
+                        <div class="setting-item">
+                            <label for="profile-visibility">Profile Visibility:</label>
+                            <select id="profile-visibility">
+                                <option value="public">Public</option>
+                                <option value="private">Private</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <button class="save-settings">Save Changes</button>
+                </div>
+            </main>
+        </div>
+
+        <script src="../js/main.js"></script>
+    </body>
+</html>

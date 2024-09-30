@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-k6RqeWeci5ZR/Lv4MR0sA0FfDOMR6LSo2z6yL4xSHD6CqEek8XhgaV0FRbWQ2U" crossorigin="anonymous">
+</head>
+
+<body>
+    <!-- Login Container -->
+    <div class="login-container">
+        <img src="image/logo.png" alt="Logo" class="logo">
+        <div class="tab active" id="sign-in-tab">Sign In</div>
+        <div class="tab" id="sign-up-tab">Sign Up</div>
+        
+        <form class="login-form" id="login-form">
+            <div class="group">
+                <label for="user" class="label">Username</label>
+                <input id="user" type="text" class="input" placeholder="Username" required>
+            </div>
+            <div class="group">
+                <label for="pass" class="label">Password</label>
+                <input id="pass" type="password" class="input" placeholder="Password" required>
+            </div>
+            <div class="group">
+                <input id="check" type="checkbox" class="check" checked>
+                <label for="check"><span class="check-text"> Keep me Signed in</span></label>
+            </div>
+            <div class="group">
+                <input type="submit" class="button" value="Sign In">
+            </div>
+            <div class="hr"></div>
+            <div class="foot-lnk">
+                <a href="#forgot">Forgot Password?</a>
+            </div>
+        </form>
+        
+        <form class="login-form" id="signup-form" style="display: none;">
+            <div class="group">
+                <label for="new-user" class="label">Username</label>
+                <input id="new-user" type="text" class="input" placeholder="Username" required>
+            </div>
+            <div class="group">
+                <label for="new-pass" class="label">Password</label>
+                <input id="new-pass" type="password" class="input" placeholder="Password" required>
+            </div>
+            <div class="group">
+                <label for="new-pass-confirm" class="label">Confirm Password</label>
+                <input id="new-pass-confirm" type="password" class="input" placeholder="Confirm Password" required>
+            </div>
+            <div class="group">
+                <input type="submit" class="button" value="Sign Up">
+            </div>
+        </form>
+
+        <div class="return-home">
+            <a href="index.html">
+                <i class="fas fa-home"></i> Return to Home Page
+            </a>
+        </div>
+    </div>
+
+    <script src="scripts/index.js"></script>
+</body>
+
+</html>
