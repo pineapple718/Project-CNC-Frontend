@@ -1,16 +1,23 @@
 const router = require("express").Router();
 
 const { authenticateToken } = require("./userAuth");
-const Reservation = require('../models/reservation');  
+const Reservation = require('../models/reservation'); 
+const User = require('../models/user'); 
 
 
 router.post('/reserve', authenticateToken , async (req, res) => {
   try {
     const { name, email, dateTime, numberOfGuests, specialRequests } = req.body;
+    const userId = req.user.id;
 
    
     if (!name || !email || !dateTime || !numberOfGuests) {
       return res.status(400).json({ message: 'All fields are required' });
+    }
+
+    const user = await User.findById(userId);
+    if (!user) {
+      return res.status(404).json({ message: 'User not found' });
     }
 
     
@@ -26,11 +33,12 @@ router.post('/reserve', authenticateToken , async (req, res) => {
 
    
     const reservation = new Reservation({
-      name: name,
-      email: email,
-      reservationDateTime: dateTime,
-      numberOfGuests: numberOfGuests,
-      specialRequests: specialRequests,
+        user: userId, 
+        name: name,
+        email: email,
+        reservationDateTime: dateTime,
+        numberOfGuests: numberOfGuests,
+        specialRequests: specialRequests,
     });
 
     await reservation.save();
@@ -40,3 +48,5 @@ router.post('/reserve', authenticateToken , async (req, res) => {
     res.status(500).json({ message: 'Server error, please try again later' });
   }
 });
+
+module.exports = router;
